@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Fun for Kids!</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Add a playful font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="parallax">
+        <div class="parallax__layer parallax__layer--back">
+            <div class="background"></div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+            <div class="content">
+                <h1>Grammar Fun for Kids!</h1>
+                <p class="subtitle">Fix your sentences and learn while having fun!</p>
+
+                <!-- Example sentence for the user -->
+                <p><strong>Example Sentence:</strong> "I go there yesterday."</p>
+                <p><strong>Correct Sentence:</strong> "I went there yesterday."</p>
+
+                <form id="grammarForm">
+                    <textarea id="inputText" placeholder="Type your sentence here..." required></textarea>
+                    <button type="submit">Fix My Sentence!</button>
+                </form>
+
+                <div id="result">
+                    <h2>Corrected Sentence:</h2>
+                    <p id="correctedText"></p>
+                    <h3>Original Sentence:</h3>
+                    <p id="originalText"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add 3D illustrations -->
+    <img src="{{ url_for('static', filename='images/cloud1.png') }}" class="cloud cloud1" alt="Cloud">
+    <img src="{{ url_for('static', filename='images/cloud22.png') }}" class="cloud cloud2" alt="Cloud">
+    <img src="{{ url_for('static', filename='images/cloud3.png') }}" class="rocket" alt="Rocket">
+    <!-- Link to the JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

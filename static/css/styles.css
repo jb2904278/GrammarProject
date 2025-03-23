@@ -1,0 +1,242 @@
+/* Basic reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Comic Neue', cursive;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+/* Parallax effect */
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+}
+
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+
+/* Background gradient */
+.background {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    height: 100vh;
+}
+
+/* Centered content */
+.content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #333;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Heading */
+h1 {
+    font-family: 'Chewy', cursive;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff6f61;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Textarea for user input */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: 3px solid #ff6f61;
+    margin-bottom: 20px;
+    resize: none;
+    font-family: 'Comic Neue', cursive;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #ff3b2f;
+}
+
+/* Submit button */
+button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #ff6f61;
+    color: white;
+    cursor: pointer;
+    font-family: 'Chewy', cursive;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+button:hover {
+    background-color: #ff3b2f;
+}
+
+/* Result section */
+#result {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#correctedText {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 3D Illustrations */
+.cloud {
+    position: absolute;
+    z-index: 1;
+    animation: float 6s infinite ease-in-out;
+}
+
+.cloud1 {
+    width: 150px;
+    top: 10%;
+    left: 5%;
+}
+
+.cloud2 {
+    width: 120px;
+    top: 20%;
+    right: 10%;
+}
+
+.rocket {
+    position: absolute;
+    width: 100px;
+    bottom: 10%;
+    right: 5%;
+    animation: float 4s infinite ease-in-out;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    #correctedText {
+        font-size: 1rem;
+    }
+
+    .cloud1 {
+        width: 120px;
+        top: 5%;
+        left: 2%;
+    }
+
+    .cloud2 {
+        width: 100px;
+        top: 15%;
+        right: 5%;
+    }
+
+    .rocket {
+        width: 80px;
+        bottom: 5%;
+        right: 2%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    #correctedText {
+        font-size: 0.9rem;
+    }
+
+    .cloud1 {
+        width: 100px;
+        top: 2%;
+        left: 1%;
+    }
+
+    .cloud2 {
+        width: 80px;
+        top: 10%;
+        right: 2%;
+    }
+
+    .rocket {
+        width: 60px;
+        bottom: 2%;
+        right: 1%;
+    }
+}
